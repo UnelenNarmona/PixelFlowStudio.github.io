@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de desarrollo web profesional: diseño moderno, funcional y adaptado a tus necesidades">
+  <title>Servicios Web Profesionales</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="logo.png">
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #0044cc;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header .logo-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: burlywood;
+}
+
+/* Estilo del icono de persona */
+.login-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.textbox {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#presentation {
+  background-color: #e8f4ff;
+  padding: 50px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+#presentation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about-us {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+#about-us.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#pricing {
+  padding: 50px 20px;
+  background-color: #e8f4ff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+#pricing.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.details-section p, .details-section ul {
+  font-size: 1.2rem;
+}
+
+.details-section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+footer ul li a {
+  color: #4da8da;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#contact {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+#contact ul li {
+  margin: 10px 0;
+}
+
+#contact ul li a {
+  color: #0044cc;
+  text-decoration: none;
+}
+
+#contact ul li a:hover {
+  text-decoration: underline;
+  color: burlywood;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo-title">PixelFlow Studio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-us">Sobre Nosotros</a></li>
+          <li><a href="#pricing">Precios</a></li>
+          <li><a href="#how-we-work">Cómo Trabajamos</a></li>
+          <li><a href="#maintenance">Mantenimiento</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="presentation">
+      <h2>Bienvenido a Nuestro Servicio de Desarrollo Web</h2>
+      <p>Transformamos tus ideas en páginas web modernas, funcionales y optimizadas para el éxito.</p>
+      <p>Calidad garantizada con precios competitivos y un equipo con más de 5 años de experiencia.</p>
+      <p>Nuestra misión es proporcionarte herramientas digitales que impulsen tu negocio hacia nuevas alturas, utilizando tecnologías de vanguardia y un enfoque centrado en el usuario.</p>
+      <p>Todos nuestros diseños están completamente optimizados para dispositivos móviles, asegurando una experiencia perfecta en cualquier pantalla.</p>
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button 
+          style="background-color: #0044cc; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer; transform: scale(1.05);" 
+          onclick="window.location.href='mailto:unelennarmona@gmail.com'">
+          Contactar por Correo
+        </button>
+      </div>
+    </section>
+
+    <section id="about-us">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un equipo especializado en desarrollo web con más de 5 años de experiencia en el sector.</p>
+      <p>Nos apasiona crear soluciones que potencien tu presencia en línea, combinando diseño atractivo y tecnología avanzada. Desde pequeños negocios hasta grandes empresas, adaptamos nuestros servicios para cumplir con las necesidades específicas de cada cliente.</p>
+      <ul>
+        <li>Diseño responsive: adaptable a cualquier dispositivo.</li>
+        <li>Optimizaciones avanzadas para SEO.</li>
+        <li>Enfoque en la usabilidad y experiencia del usuario.</li>
+        <li>Soporte técnico dedicado.</li>
+      </ul>
+    </section>
+
+    <section id="pricing">
+      <h2>Precios</h2>
+      <div class="pricing-cards">
+        <div class="card" onclick="location.href='#landing-page-details'">
+          <h3>Landing Page</h3>
+          <p>Desde $100 USD</p>
+        </div>
+        <div class="card" onclick="location.href='#blog-details'">
+          <h3>Blog Personal</h3>
+          <p>Desde $200 USD</p>
+        </div>
+        <div class="card" onclick="location.href='#store-details'">
+          <h3>Tienda Online</h3>
+          <p>Desde $500 USD</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-we-work">
+      <h2>Cómo Trabajamos</h2>
+      <p>En nuestro enfoque, priorizamos la personalización y la calidad. Cada proyecto comienza con una consulta detallada para entender tus necesidades y objetivos. Luego, seguimos un proceso estructurado para garantizar resultados excepcionales:</p>
+      <ul>
+        <li>Consulta inicial para comprender tus requerimientos específicos.</li>
+        <li>Prototipos y mockups para visualizar el diseño.</li>
+        <li>Desarrollo utilizando tecnologías modernas y prácticas recomendadas.</li>
+        <li>Revisiones y pruebas exhaustivas para asegurar el rendimiento óptimo.</li>
+        <li>Entrega puntual y soporte continuo.</li>
+      </ul>
+      <p>Es importante tener en cuenta que los precios pueden variar dependiendo de la complejidad del proyecto y la ubicación geográfica. Factores como la personalización avanzada, integraciones adicionales o requisitos específicos pueden influir en el costo final.</p>
+    </section>
+
+    <section id="maintenance">
+      <h2>Mantenimiento</h2>
+      <p>Ofrecemos servicios de mantenimiento para garantizar que tu página web siga funcionando de manera óptima y esté siempre actualizada. Nuestro servicio incluye:</p>
+      <ul>
+        <li>Actualización regular de contenido y diseño.</li>
+        <li>Optimización continua para mejorar el rendimiento.</li>
+        <li>Resolución rápida de problemas técnicos.</li>
+        <li>Soporte para nuevas funcionalidades e integraciones.</li>
+      </ul>
+      <p>Planes de mantenimiento:</p>
+      <ul>
+        <li><strong>Mensual:</strong> Desde $20 USD al mes.</li>
+        <li><strong>Anual:</strong> Desde $200 USD al año (ahorra 2 meses).</li>
+      </ul>
+      <p>El precio puede variar según la complejidad del sitio y la cantidad de cambios requeridos.</p>
+    </section>
+
+    <section id="payment-methods">
+      <h2>Métodos de Pago</h2>
+      <p>Aceptamos los siguientes métodos de pago para facilitar tu experiencia de compra:</p>
+      <ul>
+        <li><strong>PayPal:</strong> Realiza tus pagos de forma segura con PayPal, una plataforma confiable y ampliamente utilizada en todo el mundo.</li>
+        <li><strong>Mercado Pago:</strong> También puedes pagar utilizando Mercado Pago, una opción popular en América Latina, que permite pagos con tarjetas de crédito, débito y más.</li>
+      </ul>
+      <p>Elige el método que más te convenga y realiza tus pagos con total seguridad.</p>
+    </section>
+
+    <section id="landing-page-details" class="details-section">
+        <h3>Landing Page</h3>
+        <p>Diseño optimizado para captar clientes. Ideal para promocionar productos o servicios. Una Landing Page incluye:</p>
+        <ul>
+          <li>Diseño responsivo que se adapta a cualquier dispositivo.</li>
+          <li>Velocidad de carga optimizada para garantizar la mejor experiencia del usuario.</li>
+          <li>Secciones personalizables para destacar tus principales ofertas o productos.</li>
+          <li>Integración con herramientas de análisis para monitorear el rendimiento.</li>
+        </ul>
+      </section>
+  
+      <section id="blog-details" class="details-section">
+        <h3>Blog Personal</h3>
+        <p>Comparte tus ideas y contenidos en una plataforma atractiva y fácil de usar. Nuestros blogs incluyen:</p>
+        <ul>
+          <li>Interfaz intuitiva para publicar y gestionar entradas.</li>
+          <li>Diseño moderno y adaptable a tu estilo personal.</li>
+          <li>Optimización para SEO, ayudando a que tus publicaciones lleguen a más personas.</li>
+          <li>Soporte técnico para asegurar que todo funcione correctamente.</li>
+        </ul>
+      </section>
+  
+      <section id="store-details" class="details-section">
+        <h3>Tienda Online</h3>
+        <p>Plataforma completa para comercio electrónico. Todo lo que necesitas para vender en línea:</p>
+        <ul>
+          <li>Diseño profesional y amigable para los usuarios.</li>
+          <li>Carrito de compras integrado con múltiples opciones de pago.</li>
+          <li>Gestión de inventario sencilla y eficiente.</li>
+
+          
+
+        </main>
+        <section id="contact">
+          <h2>Contacto</h2>
+          <p>¡Nos encantaría saber de ti!</p>
+          <ul>
+            <li><strong>Correo Electrónico:</strong> <a href="mailto:unelennarmona@gmail.com">unelennarmona@gmail.com</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/unelennarmona@mail.com" target="_blank">@unelennarmona</a></li>
+          </ul>
+        </section>
+
+  <footer>
+    <p>&copy; 2024 Servicios Web Profesionales</p>
+  </footer>
+
+  <script>
+    // Función de animación con IntersectionObserver
+    const sections = document.querySelectorAll('section');
+
+    const options = {
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

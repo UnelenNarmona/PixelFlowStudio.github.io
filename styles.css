@@ -1,0 +1,150 @@
+/* Estilo General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f9fc;
+  }
+  
+  header {
+    background-color: #004e89;
+    color: #fff;
+    padding: 1em 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  nav a:hover{
+    color: burlywood;
+  }
+  
+  /* Presentación */
+  #presentation {
+    background-color: #e6f7ff;
+    padding: 3em 0;
+    text-align: center;
+  }
+  
+  #presentation h2 {
+    font-size: 2.5em;
+    color: #004e89;
+  }
+  
+  #presentation p {
+    font-size: 1.2em;
+    margin-top: 1em;
+  }
+  
+  /* Carrusel */
+  .carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 2em auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-track img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  /* Secciones */
+  section {
+    padding: 3em 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #004e89;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #e6f7ff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h3 {
+    color: #004e89;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #004e89;
+    color: #fff;
+    padding: 2em 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #82cfff;
+    text-decoration: none;
+  }
+
+  .contact-list{
+    list-style: none;
+
+  }
+  
